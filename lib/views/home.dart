@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/album_item_card.dart';
+
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
   @override
   // ignore: library_private_types_in_public_api
   _HomeViewState createState() => _HomeViewState();
 }
-
 
 class _HomeViewState extends State<HomeView> {
   @override
@@ -72,79 +73,59 @@ class _HomeViewState extends State<HomeView> {
                     child: Row(
                       children: [
                         AlbumItemCard(
-                          label: "best mode",
-                          image: AssetImage("assets/img.jpeg")
-                        ),
+                            label: "motivational songs",
+                            image: AssetImage("assets/img.jpeg")),
                         SizedBox(
                           width: 16,
                         ),
                         AlbumItemCard(
-                          label: "best mode",
-                          image: AssetImage("assets/OIP.jpeg")
-                        ),
+                            label: "power gaming",
+                            image: AssetImage("assets/OIP.jpeg")),
                         SizedBox(
                           width: 16,
                         ),
                         AlbumItemCard(
-                          label: "best mode",
-                          image: AssetImage("assets/alok1.jpeg")
-                        ),
-                        SizedBox(
-                          width: 16, 
-                        ),
-                        AlbumItemCard(
-                          label: "best mode",
-                          image: AssetImage("assets/alok2.jpeg")
-                        ),
+                            label: "top 50 melhores",
+                            image: AssetImage("assets/alok1.jpeg")),
                         SizedBox(
                           width: 16,
                         ),
                         AlbumItemCard(
-                          label: "best mode",
-                          image: AssetImage("assets/eletronic.jpeg")
-                        ),
+                            label: "play list completa",
+                            image: AssetImage("assets/alok2.jpeg")),
                         SizedBox(
                           width: 16,
                         ),
                         AlbumItemCard(
-                          label: "best mode",
-                          image: AssetImage("assets/alok.jpeg")
+                            label: "eletronic",
+                            image: AssetImage("assets/eletronic.jpeg")),
+                        SizedBox(
+                          width: 16,
                         ),
+                        AlbumItemCard(
+                            label: "alok",
+                            image: AssetImage("assets/alok.jpeg")),
                         SizedBox(
                           width: 16,
                         ),
                       ],
-                    ))
+                    )),
+                Column(
+                  children: [
+                    Text(
+                      "good everning",
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    )
+                  ],
+                )
               ],
             ),
           ),
         ),
       ],
     ));
-  }
-}
-
-class AlbumItemCard extends StatelessWidget {
-  final ImageProvider image;
-  final String label;
-
-  const AlbumItemCard({
-     Key? key,
-     required this.image,
-     required this.label,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Image(image: image, width: 120,),
-        const SizedBox(
-          height: 10,
-        ),
-        Text(label),
-      ],
-    );
   }
 }
