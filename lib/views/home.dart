@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/album_item_card.dart';
+import '../share/components/album_item_card.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

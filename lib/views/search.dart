@@ -10,11 +10,11 @@ class SearchView extends StatefulWidget {
 class _SearchViewState extends State<SearchView> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text("buscar"),
-        actions: const[
+        actions: const [
           CircleAvatar(
             child: Icon(Icons.person),
           )

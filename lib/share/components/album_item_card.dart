@@ -5,10 +5,10 @@ class AlbumItemCard extends StatelessWidget {
   final String label;
 
   const AlbumItemCard({
-    Key? key,
+    super.key,
     required this.image,
     required this.label,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
